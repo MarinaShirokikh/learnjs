@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	alert ('Привет! это простой конвертор валют');
+	//Объявляю переменные для значений курсов доллара и евро
+	var usd = 62;
+	var euro = 69;
+	//Ввод данных от пользователя, строковое значение переводится в число (+ или parseInt)
+	var rub = +prompt('Введите количество рублей для конвертации:');
+	//Вычисление кол-ва доллоров и вывод пользователю
+	var rubToUsd = rub/usd;
+	var rubToEuro = rub/euro;
+	alert(rub + ' руб = '+ rubToUsd.toFixed(2) + ' доллоров. \n' +
+			rub + ' руб = '+ rubToEuro.toFixed(2) + ' евро.');
+</script>
