@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+/*Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно. Отобразить размер вклада поочередно на ближайшеие 5 лет */
+
+var summ = +prompt ("Введите сумму вклада в руб. ");
+var percent = +prompt ("Введите ежегодный процент вклада: ");
+//vklad = vklad + (vklad \100 *percent)
+percent = percent/100;
+var result = 'Изменение вклада по годам: \n';
+for (var i =1; i <= 5; i++) {
+	summ = summ + (summ * percent);
+	result +=i + ' год: ' + summ.toFixed(2) + ' рублей \n';
+}
+alert(result);
+
+</script>
