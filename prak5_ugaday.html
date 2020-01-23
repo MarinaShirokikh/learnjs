@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+/*Комп генерирует число, пользователю нужно его угадать.*/
+	var answer = parseInt(Math.random()*100);
+	var playerNumber = 1;
+	while(true){
+		var userAnswer = prompt ("Угадайте число от 0 до 100. \n Ходит игрок " + playerNumber + ". \n Для выхода нажмите q");
+		if(userAnswer == 'q') //проверка хочет пользователь выйти или нет
+			break;
+		userAnswer = parseInt(userAnswer); //перевод в число введенного пользователем значения
+
+		if(userAnswer == answer){
+			alert("Поздравляю, Победил игрок " + playerNumber);
+			break;
+			//continue; сразу переходим к следующей итерации
+		} else if (userAnswer > answer){
+			alert("Вы ввели слишком большое число");
+		} else if (userAnswer < answer){
+			alert('Вы ввели слишком маленькое число');
+		}
+	
+		if (playerNumber == 1)
+			playerNumber = 2;
+		else
+			playerNumber = 1;
+	}
+	alert("Правильный ответ: " + answer);
+
+
+</script>
